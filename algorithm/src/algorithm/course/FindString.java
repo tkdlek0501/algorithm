@@ -2,26 +2,26 @@ package algorithm.course;
 
 import java.util.Scanner;
 
-// 1. ¹®ÀÚ Ã£±â
-// ÇÑ °³ÀÇ ¹®ÀÚ¿­À» ÀÔ·Â ¹Þ°í,
-// Æ¯Á¤ ¹®ÀÚ¿­À» ÀÔ·Â¹Þ¾Æ
-// ÇØ´ç Æ¯Á¤ ¹®ÀÚ°¡ ÀÔ·Â¹ÞÀº ¹®ÀÚ¿­¿¡ ¸î °³ Á¸ÀçÇÏ´ÂÁö ¾Ë¾Æ³»´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ¼¼¿ä.
-// (´ë¼Ò¹®ÀÚ ±¸ºÐ x , ¹®ÀÚ¿­ ±æÀÌ 100 ³ÑÁö ¾ÊÀ½)
+// #1 ë¬¸ìž ì°¾ê¸°
+// í•œ ê°œì˜ ë¬¸ìžì—´ì„ ìž…ë ¥ ë°›ê³ ,
+// íŠ¹ì • ë¬¸ìžì—´ì„ ìž…ë ¥ë°›ì•„
+// í•´ë‹¹ íŠ¹ì • ë¬¸ìžê°€ ìž…ë ¥ë°›ì€ ë¬¸ìžì—´ì— ëª‡ ê°œ ì¡´ìž¬í•˜ëŠ”ì§€ ì•Œì•„ë‚´ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì„¸ìš”.
+// (ëŒ€ì†Œë¬¸ìž êµ¬ë¶„ x , ë¬¸ìžì—´ ê¸¸ì´ 100 ë„˜ì§€ ì•ŠìŒ)
 
-// ÀÔ·Â: Ã¹ ÁÙ¿¡ ¹®ÀÚ¿­, µÎ¹øÂ° ÁÙ¿¡ ¹®ÀÚ, ¿µ¾î ¾ËÆÄºªÀ¸·Î¸¸ ±¸¼º
-// Ãâ·Â: Ã¹ ÁÙ¿¡ ÇØ´ç ¹®ÀÚÀÇ °³¼ö¸¦ Ãâ·Â
+// ìž…ë ¥: ì²« ì¤„ì— ë¬¸ìžì—´, ë‘ë²ˆì§¸ ì¤„ì— ë¬¸ìž, ì˜ì–´ ì•ŒíŒŒë²³ìœ¼ë¡œë§Œ êµ¬ì„±
+// ì¶œë ¥: ì²« ì¤„ì— í•´ë‹¹ ë¬¸ìžì˜ ê°œìˆ˜ë¥¼ ì¶œë ¥
 
-class FindString { // class ÀÌ¸§À» Main À¸·Î ÇØ¾ß ¹éÁØ or Ã¤Á¡ »çÀÌÆ®¿¡¼­ Ã¤Á¡ °¡´É
+class FindString { // class ì´ë¦„ì„ Main ìœ¼ë¡œ í•´ì•¼ ë°±ì¤€ or ì±„ì  ì‚¬ì´íŠ¸ì—ì„œ ì±„ì  ê°€ëŠ¥
 	
-	// ÇÁ·Î±×·¡¸Ó½º Çü½Ä
+	// í”„ë¡œê·¸ëž˜ë¨¸ìŠ¤ í˜•ì‹
 	public int solution(String str, char t) {
 		int answer = 0;
-		str = str.toUpperCase(); // ¸ðµÎ ´ë¹®ÀÚ·Î
-		t = Character.toUpperCase(t); // ´ë¹®ÀÚ·Î (char Å¸ÀÔÀº ÀÌ·¸°Ô)
+		str = str.toUpperCase(); // ëª¨ë‘ ëŒ€ë¬¸ìžë¡œ
+		t = Character.toUpperCase(t); // ëŒ€ë¬¸ìžë¡œ (char íƒ€ìž…ì€ ì´ë ‡ê²Œ)
 //		for(int i=0; i < str.length(); i++) {
 //			if(str.charAt(i) == t) answer += 1;
 //		}
-		for(char x : str.toCharArray()) { // ¹®ÀÚ¿­À» ¹è¿­·Î ¸¸µé±â
+		for(char x : str.toCharArray()) { // ë¬¸ìžì—´ì„ ë°°ì—´ë¡œ ë§Œë“¤ê¸°
 			if(x == t) answer += 1;
 		}
 		
@@ -30,15 +30,15 @@ class FindString { // class ÀÌ¸§À» Main À¸·Î ÇØ¾ß ¹éÁØ or Ã¤Á¡ »çÀÌÆ®¿¡¼­ Ã¤Á¡ °
 	
 	public static void main(String[] args) {
 		//Main T = new Main();
-		FindString T = new FindString(); // ÀÎ½ºÅÏ½º ¸Þ¼­µåÀÎ solution È£ÃâÇÏ±â À§ÇØ
+		FindString T = new FindString(); // ì¸ìŠ¤í„´ìŠ¤ ë©”ì„œë“œì¸ solution í˜¸ì¶œí•˜ê¸° ìœ„í•´
 		
-		Scanner kb = new Scanner(System.in); // ÄÜ¼Ö ÀÔÃâ·Â
+		Scanner kb = new Scanner(System.in); // ì½˜ì†” ìž…ì¶œë ¥
 		
-		System.out.println("¹®ÀÚ¿­À» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
-		String str = kb.next(); // ÄÜ¼ÖÃ¢¿¡¼­ ¹®ÀÚ¿­ ÀÐ¾î¿À±â
+		System.out.println("ë¬¸ìžì—´ì„ ìž…ë ¥í•´ì£¼ì„¸ìš”.");
+		String str = kb.next(); // ì½˜ì†”ì°½ì—ì„œ ë¬¸ìžì—´ ì½ì–´ì˜¤ê¸°
 		
-		System.out.println("¹®ÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
-		char c = kb.next().charAt(0);// ¹®ÀÚ¿­ Áß ¹®ÀÚ ÇÏ³ª ÀÐ¾î¿À±â
+		System.out.println("ë¬¸ìžë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš”.");
+		char c = kb.next().charAt(0);// ë¬¸ìžì—´ ì¤‘ ë¬¸ìž í•˜ë‚˜ ì½ì–´ì˜¤ê¸°
 		
 		System.out.print(T.solution(str, c));
 		kb.close();
