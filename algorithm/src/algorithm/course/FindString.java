@@ -2,6 +2,8 @@ package algorithm.course;
 
 import java.util.Scanner;
 
+// 백준에서는 class 이름을 Main으로 해야하고 콘솔 입출력 방식으로 장석해야 한다
+
 // #1 문자 찾기
 // 한 개의 문자열을 입력 받고,
 // 특정 문자열을 입력받아
