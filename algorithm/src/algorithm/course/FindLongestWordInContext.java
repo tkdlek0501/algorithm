@@ -38,12 +38,12 @@ public class FindLongestWordInContext {
 		String answer = "";
 		int m = 0, pos;
 		// 띄어쓰기를 찾기, 못찾으면 -1
-		while((pos = str.indexOf(" ")) != -1) {
+		while((pos = str.indexOf(" ")) != -1) { // 띄어쓰기 찾으면 pos에 index 넣기
 			String tmp = str.substring(0, pos); // first ~ last-1 까지 잘라냄
-			int len = tmp.length();
-			if(len > m) {
-				m = len;
-				answer = tmp;
+			int len = tmp.length(); // 잘라낸 문자의 길이
+			if(len > m) { // 이전보다 크다면
+				m = len; // 길이 갱신하고
+				answer = tmp; // answer에 들어갈 단어도 갱신
 			}
 			str = str.substring(pos + 1); // 그 다음 단어의 시작부터
 		}
