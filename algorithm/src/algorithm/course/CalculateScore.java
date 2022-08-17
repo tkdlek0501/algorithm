@@ -40,6 +40,6 @@ public class CalculateScore {
 			arr[i] = kb.nextInt();
 		}
 		
-		System.out.println(T.solution(n, arr));
+		System.out.print(T.solution(n, arr));
 	}
 }
