@@ -24,7 +24,7 @@ public class HashMap1 {
 	
 	public char solution(int n, String str) {
 		char answer = 0;
-		HashMap<Character, Integer> map = new HashMap<>();
+		HashMap<Character, Integer> map = new HashMap<>(); // 중복을 허용하지 않는 key - value쌍
 		
 		for(char x : str.toCharArray()) {
 			map.put(x, map.getOrDefault(x, 0) + 1); // getOrDefault ; key에 해당하는 value가 있으면 가져오고 존재하지 않으면 default 설정
@@ -32,6 +32,8 @@ public class HashMap1 {
 		}
 		
 		System.out.println(map.containsKey('A')); // key의 존재 유무에 대해 boolean으로 return
+		System.out.println(map.size()); // key의 개수
+		// System.out.println(map.remove('A')); // 특정 key를 삭제
 		
 		int max = Integer.MIN_VALUE;
 		for(char key : map.keySet()) { // map에 있는 key(Character 타입) 를 Set으로
