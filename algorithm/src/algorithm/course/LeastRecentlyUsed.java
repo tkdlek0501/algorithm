@@ -2,7 +2,7 @@ package algorithm.course;
 
 import java.util.Scanner;
 
-//#46 LRU
+//#47 LRU
 // 카카오 변형
 // 캐시메모리는 CPU와 주기억장치 사이의 고속의 임시 메모리로서 CPU가 처리할 작업을 저장해 놓았다가
 // 필요할때 바로 사용해서 처리속도를 높이는 장치이다. 
