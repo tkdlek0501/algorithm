@@ -23,7 +23,7 @@ public class StackFrame {
 		else {
 			// 여기서 sysout을 하면 3 2 1 로 출력된다
 			DFS(n-1); // 여기서 호출이 된다; 현재 함수가 끝나기 전에 다음 함수가 진행된다
-			System.out.println(n + " "); // 1 2 3 으로 출력된다
+			System.out.print(n + " "); // 1 2 3 으로 출력된다
 			// 재귀함수는 stackframe 이다
 			// stack에 쌓이는 데이터는 매개변수, 지역변수, 복귀주소를 가지고 있다
 			// stack에 DFS(3), DFS(2), DFS(1), DFS(0) 까지 쌓이고
